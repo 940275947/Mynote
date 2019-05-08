@@ -1,0 +1,65 @@
+searchname.setOnSearchClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DataOperation dataOperation = new DataOperation(MainActivity.this, "note_db", null, 2);
+                SQLiteDatabase db= dataOperation.getWritableDatabase();
+
+                String s;
+                Date curdate=new Date(System.currentTimeMillis());
+
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                s=simpleDateFormat.format(curdate);
+
+                //     dataOperation.insert("笔记一","内容一",s);
+                //     dataOperation.insert("笔记二","内容二",s);
+                Cursor name=dataOperation.getAll();
+
+                while(name.moveToNext()){
+                    Map<String, Object> items = new HashMap<String, Object>();
+                    String notename1=name.getString(0);
+                    notetitle.add(notename1);
+                    String notetime1=name.getString(2);
+                    items.put("notename1", notename1);  //放入头像， 根据下标获取数组
+                    items.put("notetime1", notetime1);      //放入名字， 根据下标获取数组
+                    list_map.add(items);
+                }
+                name.close();
+                db.close();
+
+                //为所有按钮对象设置监听器
+                //依靠DatabaseHelper的构造函数创建数据库
+                SimpleAdapter simpleAdapter = new SimpleAdapter(
+                        MainActivity.this,
+                        list_map,
+                        R.layout.listnote_item,
+                        new String[]{"notename1", "notetime1"},
+                        new int[]{R.id.notename, R.id.notetime});
+
+            }
+        });
+
+
+
+        searchname.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                    // 当点击搜索按钮时触发该方法
+                    @Override
+                    public boolean onQueryTextSubmit(String query) {
+                        Toast.makeText(MainActivity.this, "提交", Toast.LENGTH_SHORT).show();
+                        return false;
+                    }
+
+                    // 当搜索内容改变时触发该方法
+                    @Override
+                    public boolean onQueryTextChange(String s) {
+                        if (TextUtils.isEmpty(s)) {
+                            // Clear the text filter.
+                            listView.clearTextFilter();
+                        } else {
+                            // Sets the initial value for the text filter.
+                            listView.setFilterText(s.toString());
+                        }
+                        return false;
+
+
+                    }
+                });

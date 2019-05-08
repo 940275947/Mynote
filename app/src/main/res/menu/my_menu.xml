@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/item2"
+        android:icon="@mipmap/ic_launcher"
+        android:title="背景">
+    <menu >
+        <group android:id="@+id/backcolor1">
+            <item android:id="@+id/backcolor11" android:title="背景一"/>
+            <item android:id="@+id/backcolor12" android:title="背景二"/>
+            <item android:id="@+id/backcolor13" android:title="背景三"/>
+        </group>
+    </menu>
+    </item >
+
+    <item
+        android:id="@+id/menuItem_3"
+        android:icon="@mipmap/ic_launcher"
+        android:title="字体背景颜色">
+        <menu >
+            <group android:id="@+id/wordcolor">
+                <item android:id="@+id/red" android:title="黄色"/>
+                <item android:id="@+id/black" android:title="蓝色"/>
+            </group>
+        </menu>
+    </item >
+
+
+
+</menu>
