@@ -1,6 +1,7 @@
 # Mynote
  ​      期中实验NotePad
  一.类之间的关系图
+ ![image](https://github.com/940275947/cextest3/blob/master/image/image1.png)
 
 二.主要功能：
 
