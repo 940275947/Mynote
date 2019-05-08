@@ -1,7 +1,7 @@
 # Mynote
  ​      期中实验NotePad
  一.类之间的关系图
- ![image](https://github.com/940275947/cextest3/blob/master/image/image1.png)
+ ![image](https://github.com/940275947/Mynote/blob/master/app/image/image1.png)
 
 二.主要功能：
 
@@ -14,3 +14,12 @@
 4.自选笔记背景（三种背景选择）
 
 5.改变字体背景
+ ![image](https://github.com/940275947/Mynote/blob/master/app/image/image2.png)
+  ![image](https://github.com/940275947/Mynote/blob/master/app/image/image3.png)
+   ![image](https://github.com/940275947/Mynote/blob/master/app/image/image4.png)
+    ![image](https://github.com/940275947/Mynote/blob/master/app/image/image5.png)
+     ![image](https://github.com/940275947/Mynote/blob/master/app/image/image6.png)
+      ![image](https://github.com/940275947/Mynote/blob/master/app/image/image7.png)
+       ![image](https://github.com/940275947/Mynote/blob/master/app/image/image8.png)
+            ![image](https://github.com/940275947/Mynote/blob/master/app/image/image9.png)
+                   ![image](https://github.com/940275947/Mynote/blob/master/app/image/image10.png)
